@@ -1,0 +1,23 @@
+{
+  "name": "tre-invite-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/regular/tre-invite-code.git"
+  },
+  "keywords": [],
+  "author": "Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/regular/tre-invite-code/issues"
+  },
+  "homepage": "https://github.com/regular/tre-invite-code#readme",
+  "devDependencies": {
+    "tape": "^4.9.2"
+  }
+}
