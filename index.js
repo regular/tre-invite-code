@@ -1,10 +1,10 @@
 function parse(compact) {
-  const m = compact.match(/^((?:[*%@][a-zA-Z0-9/+]{43}=\.(?:ed25519|sha256))+)([^']+)('[a-zA-Z0-9/+]+={0,2})?$/)
+  const m = compact.match(/^((?:[*%@][a-zA-Z0-9/+]{43}=\.(?:ed25519|sha256|random))+)([^']+)('[a-zA-Z0-9/+]+={0,2})?$/)
   if (!m) return
   const [_, fixed, autoinvite, autoname] = m
 
   const result = {}
-  fixed.replace(/[*%@][a-zA-Z0-9/+]{43}=\.(?:ed25519|sha256)/g, ref => {
+  fixed.replace(/[*%@][a-zA-Z0-9/+]{43}=\.(?:ed25519|sha256|random)/g, ref => {
     result[ref[0]] = (result[ref[0]] || []).concat(ref)
     return ''
   })

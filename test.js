@@ -86,3 +86,19 @@ test('four-letter-name', t => {
   t.deepEqual(parse(stringify(o)), o)
   t.end()
 })
+
+test('random netkey', t => {
+
+  const o = {
+    autoname: 'vier',
+    autoinvite: "138.201.131.83:52654:@MODsaDg5OpsFlca7LLSLxikxFGze4DN0xbAzvrz7uMQ=.ed25519~FYa22Lvd/Wl/o5MlPJ0XkAgSQIoQErN41/IxJPtvu+k=",
+    boot: "%lvxLQlIDhbfZKYRIZgLYAFDW30d7poZctZoAc1x9DBo=.sha256",
+    autofollow: "@h8sMNhOo43PP8HX+9B3PCJPchqxhpPXgzwFG7HIaNbd=.ed25519",
+    network: "*kWFhOEuLiics3Po/Taio9jyGPK9mKfndrDt23s5vFvE=.random"
+  }
+
+  const compact = stringify(o)
+  console.log('compact', compact)
+  t.deepEqual(parse(compact), o)
+  t.end()
+})
