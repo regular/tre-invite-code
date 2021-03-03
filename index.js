@@ -35,6 +35,7 @@ function flatten(a) {
 }
 
 function unarr(arr) {
+  if (arr == undefined) return undefined
   return arr.length == 1 ? arr[0] : arr
 }
 
